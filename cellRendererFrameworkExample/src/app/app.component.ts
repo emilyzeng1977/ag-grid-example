@@ -14,14 +14,17 @@ export class AppComponent {
 
   columnDefs = [
     {headerName: 'Make', field: 'make'},
-    {headerName: 'Model', field: 'model'},
+    {
+      headerName: 'Model',
+      field: 'model',
+      cellRenderer: (params) => {
+        return "TEST";
+      }
+    },
     {
       headerName: 'Price',
       field: 'price',
-      cellRendererFramework: DemoAgRendererComponentComponent,
-      cellRendererParams: {
-
-      }
+      cellRendererFramework: DemoAgRendererComponentComponent
     },
     {
       headerName: 'Date',
